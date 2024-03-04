@@ -1,0 +1,79 @@
+/* Setze die Schriftart und Grundstile */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7; /* leichter Hintergrund für die gesamte Seite */
+}
+
+/* Zentriere das Spielbrett in der Mitte des Bildschirms */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Stil für das Spielbrett */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin-bottom: 20px; /* Abstand unter dem Spielbrett */
+}
+
+/* Allgemeine Button-Stile */
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
+  background-color: white;
+  border: 2px solid #d4d4d4; /* Grauer Rahmen für die Zellen */
+  border-radius: 10px; /* Abgerundete Ecken für die Zellen */
+  transition: background-color 0.3s, transform 0.3s; /* Sanfter Übergang für Effekte */
+}
+
+/* Hover-Effekt für Zellen */
+button:hover:not(:disabled) {
+  background-color: #e8e8e8; /* Farbwechsel beim Überfahren */
+  transform: translateY(-5px); /* Leichtes Anheben */
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Schatten für den Schwebezustand */
+}
+
+/* Stile für aktive Zellen */
+button.X { /* Stil für Spieler X */
+  color: #ff6666; /* Rote Farbe für X */
+}
+
+button.O { /* Stil für Spieler O */
+  color: #6666ff; /* Blaue Farbe für O */
+}
+
+/* Stil für die Gewinnermeldung */
+.winner-message {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #dff0d8; /* Hintergrundfarbe */
+  color: #3c763d; /* Textfarbe */
+  border: 1px solid #d6e9c6; /* Rahmenfarbe */
+  border-radius: 5px; /* Abgerundete Ecken */
+}
+
+/* Stil für den "Neues Spiel" Button */
+.neues-spiel-button {
+  padding: 10px 30px;
+  font-size: 1em;
+  background-color: #28a745; /* Grüne Farbe für den Button */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatten für den Button */
+  transition: background-color 0.2s;
+}
+
+.neues-spiel-button:hover {
+  background-color: #218838; /* Dunklere grüne Farbe beim Überfahren */
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+/* Setze die Schriftart und Grundstile */
+body, html {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Setzt die Höhe von html und body auf 100% */
+  background-color: #f7f7f7; /* leichter Hintergrund für die gesamte Seite */
+  overflow: hidden; /* Verhindert Scrollen */
+}
+
+/* Zentriere das Spielbrett und den Button in der Mitte des Bildschirms */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Nutzt 100% der Viewport-Höhe */
+}
+
+/* Stil für das Spielbrett */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin: 20px 0; /* Fügt oben und unten Margin hinzu */
+}
+
+/* Allgemeine Button-Stile */
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
+  border: 2px solid #d4d4d4; /* Grauer Rahmen für die Zellen */
+  background-color: #fff;
+  border-radius: 10px; /* Abgerundete Ecken für die Zellen */
+  transition: background-color 0.3s, transform 0.3s; /* Sanfter Übergang für Effekte */
+}
+
+/* Hover-Effekt für Zellen */
+button:hover:not(:disabled) {
+  background-color: #e8e8e8; /* Farbwechsel beim Überfahren */
+  transform: translateY(-5px); /* Leichtes Anheben */
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Schatten für den Schwebezustand */
+}
+
+/* Stile für den "Neues Spiel" Button */
+.neues-spiel-button {
+  padding: 10px 30px;
+  font-size: 1em;
+  background-color: #add8e6; /* Hellblaue Farbe für den Button */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Stärker abgerundete Ecken für den Button */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatten für den Button */
+  transition: background-color 0.2s;
+  margin-top: 20px; /* Abstand zwischen dem Spielbrett und dem Button */
+}
+
+.neues-spiel-button:hover {
+  background-color: #97c4e0; /* Dunklere Farbe beim Überfahren */
+  cursor: pointer;
+}

@@ -1,16 +1,18 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GameBoardComponent } from './game-board/game-board.component'; // Importiere deine Komponente
+import { GameCellComponent } from './game-cell/game-cell.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameBoardComponent,
+    GameCellComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

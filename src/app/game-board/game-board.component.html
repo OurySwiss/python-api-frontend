@@ -1,0 +1,16 @@
+<div class="game-container">
+<div class="board">
+  <div *ngFor="let row of board; let i = index" class="row">
+    <app-game-cell *ngFor="let cell of row; let j = index"
+               [ngClass]="cell"
+               [value]="cell"
+               (cellClicked)="makeMove(i, j)"
+               [disabled]="cell !== '' || !!winner">
+    </app-game-cell>
+  </div>
+</div>
+<div *ngIf="winner" class="winner-message">
+  Spieler {{winner}} hat gewonnen!
+</div>
+<button (click)="reset()">Neues Spiel</button>
+</div>
